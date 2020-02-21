@@ -16,6 +16,8 @@ die "IO::Socket $!" unless $server;
 for (;;) {
     if (my $client = $server->accept()) {
         print "connected from " . $client->peerhost() . "\n";
+        print $client "HTTP/1.1 200 OK\n";
+        print $client "content-type: text/plain\n\n";
         print $client "カレーは汗をかくのでスポーツ\n";
         close $client;
         print "disconected...\n";
