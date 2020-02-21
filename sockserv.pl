@@ -18,7 +18,7 @@ for (;;) {
         print "connected from " . $client->peerhost() . "\n";
         print $client "HTTP/1.1 200 OK\n";
         print $client "content-type: text/plain\n\n";
-        print $client "カレーは汗をかくのでスポーツ\n";
+        print $client "カレーは時に甘く時に辛いので人生\n";
         close $client;
         print "disconected...\n";
     }
