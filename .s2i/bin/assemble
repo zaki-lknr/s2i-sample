@@ -1,0 +1,6 @@
+#!/bin/bash
+
+APP_ROOT=/opt/app-root/src
+SRC=/tmp/src
+
+cp -a $SRC/* $APP_ROOT/
